@@ -1,0 +1,31 @@
+%Type {
+  color: $color-text;
+  font-family: $font-body;
+  font-weight: 300;
+  line-height: 1.618;
+}
+
+%TypeDefault {
+  font-size: ms(0);
+}
+
+%TypeAlpha {
+  font-size: ms(4);
+}
+
+%TypeBeta {
+  font-size: ms(3);
+}
+
+%TypeGamma {
+  font-size: ms(2);
+}
+
+%TypeDelta {
+  font-size: ms(1);
+}
+
+body {
+  @extend %Type;
+}
+

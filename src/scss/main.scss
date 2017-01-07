@@ -1,0 +1,37 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import '1-abstracts/variables';
+@import '1-abstracts/functions';
+@import '1-abstracts/mixins';
+
+// 2. Vendors
+@import '2-vendor/bower_components/super-gigi/dist/main';
+@import '2-vendor/bower_components/modular-scale/stylesheets/modular-scale.scss';
+@import '2-vendor/reset';
+
+// 3. Base stuff
+@import '3-base/base';
+@import '3-base/fonts';
+@import '3-base/typography';
+@import '3-base/helpers';
+
+// 4. Layout-related sections
+@import '4-layout/footer';
+@import '4-layout/header';
+@import '4-layout/intro';
+@import '4-layout/resume';
+@import '4-layout/structure';
+
+// 5. Components
+@import '5-components/avatar';
+@import '5-components/button';
+@import '5-components/List';
+@import '5-components/Link';
+@import '5-components/logo';
+
+// 6. Page-specific styles
+@import '6-pages/home';
+
+// 7. Themes
+@import '7-themes/default';

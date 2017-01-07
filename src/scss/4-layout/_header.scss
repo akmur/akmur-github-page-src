@@ -1,0 +1,22 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.Header {
+  @include grid-row();
+  align-items: center;
+
+  &__logo,
+  &__tagline {
+    @include grid-column($width: (small: 12, medium: 6));
+  }
+
+  &__logo {
+    color: $color-text;
+  }
+
+  &__taglineText {
+    @extend %TypeGamma;
+    text-align: right;
+  }
+}

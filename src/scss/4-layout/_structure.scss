@@ -1,0 +1,8 @@
+.Wrapper {
+  @include grid-row(false);
+  max-width: rem-calc(1000);
+}
+
+.Page {
+  @include grid-column(12);
+}

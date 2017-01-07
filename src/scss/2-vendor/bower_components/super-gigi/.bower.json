@@ -1,0 +1,44 @@
+{
+  "name": "super-gigi",
+  "version": "1.14.2",
+  "homepage": "http://objectway.github.io/super-gigi/",
+  "authors": [
+    "MakhBeth <Davide Di Pumpo <davidemak@gmail.com>"
+  ],
+  "description": "A customizable Sass Grid Generator based on CSS3 Flex-box",
+  "main": [
+    "dist/styles/supergigi.css",
+    "dist/_main.scss"
+  ],
+  "keywords": [
+    "CSS3",
+    "Flexbox",
+    "Grid",
+    "Sass"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "scripts",
+    "gulp",
+    "src",
+    "backstop.json",
+    "package.json",
+    "gulpfile.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Objectway/super-gigi.git"
+  },
+  "_release": "1.14.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.14.2",
+    "commit": "83e2f5316dd526f3d42221bb7ab53def7e6da5e3"
+  },
+  "_source": "https://github.com/Objectway/super-gigi.git",
+  "_target": "^1.14.2",
+  "_originalSource": "super-gigi",
+  "_direct": true
+}

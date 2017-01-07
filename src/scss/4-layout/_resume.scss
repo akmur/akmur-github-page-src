@@ -1,0 +1,12 @@
+.Resume {
+  @include grid-row();
+
+  &__column {
+    @include grid-column($width: (small: 12, medium: 6));
+  }
+
+  &__title {
+    @extend %TypeBeta;
+    margin-bottom: 0.5em;
+  }
+}

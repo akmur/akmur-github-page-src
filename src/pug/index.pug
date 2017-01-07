@@ -1,0 +1,64 @@
+extends ./layout.pug
+
+block title
+  title Article Title
+
+block content
+  .Intro
+    .Intro__image
+      .Avatar
+        img(alt="", src="https://i.imgur.com/OmgK0pm.jpg")
+    .Intro__content
+      p.Intro__text
+        | I am a Front end developer.
+        br
+        |  I work @ 
+        a.Link(href="http://www.objectway.it/IT/default.asp", target="blank") Objectway
+        |  where I code modular dashboards for financial web products.
+        br
+        | I help organize the 
+        a.Link(href="http://www.objectway.it/IT/default.asp", target="blank") Milano Front End Meetup
+        |.
+
+  .Resume
+    .Resume__column
+      h3.Resume__title Skills
+      ul.List
+        li.List__item.List__item--tag HTML5
+        li.List__item.List__item--tag CSS / SCSS
+        li.List__item.List__item--tag JavaScript / ES6
+        li.List__item.List__item--tag Express.js
+        li.List__item.List__item--tag Git
+        li.List__item.List__item--tag PHP
+        li.List__item.List__item--tag WordPress
+        li.List__item.List__item--tag WooCommerce
+        li.List__item.List__item--tag DevOps
+      h3.Resume__title Languages
+      ul.List
+        li.List__item
+          | Italian Native speaker
+          br
+          | English Fluent Speaker
+      h3.Resume__title Education
+      ul.List
+        li.List__item
+          | St. John’s College (Cork, Ireland)
+          br
+          | Web Design
+          br
+          | 2006 - 2008
+        li.List__item
+          | ITIS Lagrange (Milan, Italy)
+          br
+          | Electronics
+          br
+          | 1993 - 1997
+    .Resume__column
+      h3.Resume__title Work Experience
+      
+    //- .Main__plusButton
+    //-   a.Button.Button--plus(href='#')
+    //-     span.Button__icon
+    //-       svg.Button__svg.Icon
+    //-         use(xlink:href='#icon-plus')
+    //-     span.Button__name Read More

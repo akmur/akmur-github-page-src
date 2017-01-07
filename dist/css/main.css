@@ -1,0 +1,445 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+img,
+iframe {
+  display: block;
+  width: 100%; }
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
+body {
+  color: #343436;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+  line-height: 1.618; }
+
+.List {
+  font-size: 1.25rem; }
+
+.Intro__text {
+  font-size: 1.83013rem; }
+
+.Resume__title {
+  font-size: 1.66375rem; }
+
+.Header__taglineText {
+  font-size: 1.5125rem; }
+
+.u-visuallyHidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+.Footer {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+  @media only screen and (min-width: 0em) {
+    .Footer {
+      margin-left: -0.5rem;
+      margin-right: -0.5rem;
+      width: -webkit-calc(100% + 1rem);
+      width: calc(100% + 1rem); } }
+  @media only screen and (min-width: 45em) {
+    .Footer {
+      margin-left: -1.5rem;
+      margin-right: -1.5rem;
+      width: -webkit-calc(100% + 3rem);
+      width: calc(100% + 3rem); } }
+
+.Header {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media only screen and (min-width: 0em) {
+    .Header {
+      margin-left: -0.5rem;
+      margin-right: -0.5rem;
+      width: -webkit-calc(100% + 1rem);
+      width: calc(100% + 1rem); } }
+  @media only screen and (min-width: 45em) {
+    .Header {
+      margin-left: -1.5rem;
+      margin-right: -1.5rem;
+      width: -webkit-calc(100% + 3rem);
+      width: calc(100% + 3rem); } }
+  .Header__logo, .Header__tagline {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    @media only screen and (min-width: 0em) {
+      .Header__logo, .Header__tagline {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem; } }
+    @media only screen and (min-width: 45em) {
+      .Header__logo, .Header__tagline {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem; } }
+    @media only screen and (min-width: 40em) {
+      .Header__logo, .Header__tagline {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 auto;
+            -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+        width: 100%; } }
+
+@media only screen and (min-width: 45em) {
+  .Header__logo, .Header__tagline {
+    width: 100%; } }
+    @media only screen and (min-width: 45em) {
+      .Header__logo, .Header__tagline {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 auto;
+            -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+        width: 50%; } }
+  .Header__logo {
+    color: #343436; }
+  .Header__taglineText {
+    text-align: right; }
+
+.Intro {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2em 0 3em; }
+  @media only screen and (min-width: 0em) {
+    .Intro {
+      margin-left: -0.5rem;
+      margin-right: -0.5rem;
+      width: -webkit-calc(100% + 1rem);
+      width: calc(100% + 1rem); } }
+  @media only screen and (min-width: 45em) {
+    .Intro {
+      margin-left: -1.5rem;
+      margin-right: -1.5rem;
+      width: -webkit-calc(100% + 3rem);
+      width: calc(100% + 3rem); } }
+  .Intro__image {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    @media only screen and (min-width: 0em) {
+      .Intro__image {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem; } }
+    @media only screen and (min-width: 45em) {
+      .Intro__image {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem; } }
+    @media only screen and (min-width: 40em) {
+      .Intro__image {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 auto;
+            -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+        width: 100%; } }
+
+@media only screen and (min-width: 45em) {
+  .Intro__image {
+    width: 100%; } }
+    @media only screen and (min-width: 45em) {
+      .Intro__image {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 auto;
+            -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+        width: 25%; } }
+  .Intro__content {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    @media only screen and (min-width: 0em) {
+      .Intro__content {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem; } }
+    @media only screen and (min-width: 45em) {
+      .Intro__content {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem; } }
+    @media only screen and (min-width: 40em) {
+      .Intro__content {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 auto;
+            -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+        width: 100%; } }
+
+@media only screen and (min-width: 45em) {
+  .Intro__content {
+    width: 100%; } }
+    @media only screen and (min-width: 45em) {
+      .Intro__content {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 auto;
+            -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+        width: 75%; } }
+  .Intro__text {
+    font-style: italic;
+    text-align: right; }
+
+.Resume {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+  @media only screen and (min-width: 0em) {
+    .Resume {
+      margin-left: -0.5rem;
+      margin-right: -0.5rem;
+      width: -webkit-calc(100% + 1rem);
+      width: calc(100% + 1rem); } }
+  @media only screen and (min-width: 45em) {
+    .Resume {
+      margin-left: -1.5rem;
+      margin-right: -1.5rem;
+      width: -webkit-calc(100% + 3rem);
+      width: calc(100% + 3rem); } }
+  .Resume__column {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    @media only screen and (min-width: 0em) {
+      .Resume__column {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem; } }
+    @media only screen and (min-width: 45em) {
+      .Resume__column {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem; } }
+    @media only screen and (min-width: 40em) {
+      .Resume__column {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 auto;
+            -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+        width: 100%; } }
+
+@media only screen and (min-width: 45em) {
+  .Resume__column {
+    width: 100%; } }
+    @media only screen and (min-width: 45em) {
+      .Resume__column {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 auto;
+            -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+        width: 50%; } }
+  .Resume__title {
+    margin-bottom: 0.5em; }
+
+.Wrapper {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 120rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  max-width: 62.5rem; }
+
+.Page {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto; }
+  @media only screen and (min-width: 0em) {
+    .Page {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem; } }
+  @media only screen and (min-width: 45em) {
+    .Page {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem; } }
+  @media only screen and (min-width: 0em) {
+    .Page {
+      width: 100%; } }
+  @media only screen and (min-width: 45em) {
+    .Page {
+      width: 100%; } }
+
+.Avatar {
+  border: 0.75em solid #343436;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  overflow: hidden; }
+
+.List {
+  margin-bottom: 1em; }
+  .List__item {
+    margin: 0 1rem 1rem 0; }
+    .List__item--tag {
+      background: #343436;
+      color: #ECF0F1;
+      display: inline-block;
+      padding: 0.5rem 1rem; }
+
+.Logo {
+  fill: currentColor; }

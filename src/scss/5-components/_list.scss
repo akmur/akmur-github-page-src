@@ -1,0 +1,15 @@
+.List {
+  @extend %TypeDefault;
+  margin-bottom: 1em;
+
+  &__item {
+    margin: 0 1rem 1rem 0;
+
+    &--tag {
+      background: $color-tags-background;
+      color: $color-tags-text;
+      display: inline-block;
+      padding: 0.5rem 1rem;
+    }
+  }
+}

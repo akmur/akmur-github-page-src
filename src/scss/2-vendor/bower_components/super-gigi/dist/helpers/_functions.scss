@@ -1,0 +1,131 @@
+// - REMOVE THE UNIT FROM A VALUE. BASED ON ZURB FOUNDATION
+@function remove-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+// - TRANSFORM AN ARRAY OF PX VALUES (with or without px value) in rem unit - //
+
+// - EXAMPLES
+//
+//  width: rem-calc(16 8 16 8)
+//  will return
+//  width: 1rem 0.5rem 1rem 0.5rem
+//
+//  width: rem-calc(8)
+//  will return
+//  width: 1rem
+
+$rem-base: 16px !default;
+$design-base: $rem-base !default;
+
+@function rem-calc($values, $base-value: $design-base) {
+  @if length($values) == 1 {
+    @return remove-unit($values) / remove-unit($base-value) * 1rem;
+  } @else {
+    // empty array that we will return
+    $rem-values: ();
+
+    @each $value in $values {
+      $rem-values: append($rem-values, remove-unit($value) / remove-unit($base-value) * 1rem);
+    }
+
+    @return $rem-values;
+  }
+}
+
+// - TRANSFORM AN ARRAY OF PX VALUES (with or without px value) in em unit - //
+
+@function em-calc($values, $base-value: $design-base) {
+  @if length($values) == 1 {
+    @return remove-unit($values) / remove-unit($base-value) * 1em;
+  } @else {
+    // empty array that we will return
+    $em-values: ();
+
+    @each $value in $values {
+      $em-values: append($em-values, remove-unit($value) / remove-unit($base-value) * 1em);
+    }
+
+    @return $em-values;
+  }
+}
+
+// - TRANSFORM AN ARRAY OF EM VALUES (with or without em value) in px unit - //
+@function px-calc($values, $base-value: $design-base) {
+  @if length($values) == 1 {
+    @return remove-unit($values) * remove-unit($base-value) * 1px;
+  } @else {
+    // empty array that we will return
+    $px-values: ();
+
+    @each $value in $values {
+      $px-values: append($px-values, remove-unit($value) * remove-unit($base-value) * 1px);
+    }
+
+    @return $px-values;
+  }
+}
+
+/// An equivalent of `zip` function but for maps.
+/// Takes two lists, the first for keys, second for values.
+/// From: https://www.sitepoint.com/extra-map-functions-sass/
+/// @param {List} $keys - Keys for map
+/// @param {List} $values - Values for map
+/// @return {Map} Freshly created map
+/// @see http://sass-lang.com/documentation/Sass/Script/Functions.html#zip-instance_method
+@function map-zip($keys, $values) {
+  $l-keys: length($keys);
+  $l-values: length($values);
+  $min: min($l-keys, $l-values);
+  $map: ();
+
+  @if $l-keys != $l-values {
+    @warn "There are #{$l-keys} key(s) for #{$l-values} value(s) in the map for `map-zip`. "
+        + "Resulting map will only have #{$min} pairs.";
+  }
+
+  @if $min == 0 {
+    @return $map;
+  }
+
+  @for $i from 1 through $min {
+    $map: map-merge($map, (nth($keys, $i): nth($values, $i)));
+  }
+
+  @return $map;
+}
+
+//From: http://thesassway.com/advanced/implementing-bubble-sort-with-sass
+@function swap($list, $index-a, $index-b) {
+  @if abs($index-a) > length($list) or abs($index-b) > length($list) {
+    @return $list;
+  }
+  $tmp: nth($list, $index-a);
+  $list: set-nth($list, $index-a, nth($list, $index-b));
+  $list: set-nth($list, $index-b, $tmp);
+  @return $list;
+}
+
+@function map-sort-by-value($map, $asc: true) {
+  $keys: map-keys($map);
+  $values: map-values($map);
+  @for $i from 1 through length($map) {
+    @for $z from $i * -1 through -1 {
+      $z: abs($z);
+      $order-type: false;
+
+      @if $asc {
+        $order-type: $z > 1 and (nth($values, $z)) < (nth($values, $z - 1));
+      } @else {
+        $order-type: $z > 1 and (nth($values, $z)) > (nth($values, $z - 1));
+      }
+
+      @if $order-type {
+        $keys: swap($keys, $z, $z - 1);
+        $values: swap($values, $z, $z - 1);
+      }
+    }
+  }
+  $map: map-zip($keys, $values);
+  @return $map;
+}
