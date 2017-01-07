@@ -1,7 +1,7 @@
 .Intro {
   @include grid-row();
   align-items: center;
-  margin: 2em 0 3em;
+  padding: 5rem 0 6rem;
 
   &__image {
     @include grid-column($width: (small: 12, medium: 3));

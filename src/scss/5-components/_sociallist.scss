@@ -1,0 +1,29 @@
+.SocialList {
+  @include grid-row();
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+
+  &__link {
+    align-items: center;
+    background: $color-text;
+    border-radius: 50%;
+    color: $color-background;
+    display: flex;
+    height: rem-calc(32);
+    justify-content: center;
+    margin: 0 0.5em;
+    width: rem-calc(32);
+
+    &:hover {
+      background: $color-background;
+      color: $color-text;
+    }
+  }
+
+  &__icon {
+    fill: currentColor;
+    width: rem-calc(16);
+    height: rem-calc(16);
+  }
+}

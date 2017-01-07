@@ -1,8 +1,5 @@
 extends ./layout.pug
 
-block title
-  title Article Title
-
 block content
   .Intro
     .Intro__image
@@ -13,11 +10,11 @@ block content
         | I am a Front end developer.
         br
         |  I work @ 
-        a.Link(href="http://www.objectway.it/IT/default.asp", target="blank") Objectway
+        a.Link.Link--skew(href="http://www.objectway.it/IT/default.asp", target="blank") Objectway
         |  where I code modular dashboards for financial web products.
         br
         | I help organize the 
-        a.Link(href="http://www.objectway.it/IT/default.asp", target="blank") Milano Front End Meetup
+        a.Link.Link--skew(href="http://www.objectway.it/IT/default.asp", target="blank") Milano Front End Meetup
         |.
 
   .Resume
@@ -53,9 +50,72 @@ block content
           | Electronics
           br
           | 1993 - 1997
-    .Resume__column
+      h3.Resume__title Personality
+      ul.List
+        li.List__item 
+          | I’m practical yet curious. I love what is simple, obvious, consistent. 
+          | I chase the right idea over my own. I work well in teams and can take responsibilities. 
+          | Also, fun to work with.
+    .Resume__column.Resume__column--right
       h3.Resume__title Work Experience
-      
+      ul.List
+        li.List__item
+          | Front End Developer
+          br
+          a.Link(
+            href="http://www.objectway.it/IT/default.asp"
+            target="blank"
+            ) Objectway
+          br
+          | Since November 2015
+        li.List__item
+          | Front End Developer
+          br
+          a.Link(
+            href="http://www.thelevelgroup.com/on/demandware.store/Sites-TheLevelGroup-Site/default/Home-Show"
+            target="blank"
+            ) The Level Group
+          br
+          | June 2014 to November 2015
+        li.List__item
+          | Front End Developer / UI Designer
+          br
+          a.Link(
+            href="http://www.pazienti.it"
+            target="blank"
+            ) Pazienti
+          br
+          | September 2011 to May 2015
+        li.List__item
+          | Tech Support Agent
+          br
+          a.Link(
+            href="http://www.apple.com"
+            target="blank"
+            ) Apple
+          br
+          | 2003 to 2008
+        li.List__item
+          | Web Designer
+          br
+          a.Link(
+            href="http://www.libero.it"
+            target="blank"
+            ) Libero / Italia On Line
+          br
+          | 1998 to 2001
+      h3.Resume__title Date of Birth
+      ul.List
+        li.List__item 15th of August 1978
+      h3.Resume__title Favourite Quote
+      ul.List
+        li.List__item
+          | "Be conservative in what you do, be liberal in what you accept from others." - 
+          a.Link(
+            href="https://en.wikipedia.org/wiki/Robustness_principle"
+            target="blank"
+            ) Jon Postel
+
     //- .Main__plusButton
     //-   a.Button.Button--plus(href='#')
     //-     span.Button__icon

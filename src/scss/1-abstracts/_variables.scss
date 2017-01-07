@@ -83,10 +83,12 @@ $flat-gray-4: $flat-asbestos;
 
 $color-background: $flat-gray-1;
 $color-text: $ebony-grey;
-$color-link: $flat-pomegranate;
+$color-link-background: $flat-pomegranate;
+$color-link-text: $flat-gray-1;
 $color-hover: $ebony-grey;
 $color-tags-background: $ebony-grey;
 $color-tags-text: $flat-gray-1;
+$color-border: lighten($ebony-grey, 60%);
 
 $ms-base: 1.25rem;
 $ms-ratio: 1.1;

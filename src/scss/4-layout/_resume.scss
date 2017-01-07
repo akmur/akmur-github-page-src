@@ -3,10 +3,17 @@
 
   &__column {
     @include grid-column($width: (small: 12, medium: 6));
+
+    &--right {
+      text-align: right;
+    }
   }
 
   &__title {
     @extend %TypeBeta;
-    margin-bottom: 0.5em;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed $color-border;
   }
 }

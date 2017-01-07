@@ -1,0 +1,35 @@
+.Link {
+  color: $color-link-text;
+  display: inline-block;
+  padding: 0 0.35em 0 0.25em;
+  position: relative;
+  text-decoration: none;
+  z-index: 100;
+
+  &:after {
+    background: $color-link-background;
+    content: '';
+    height: 1.55em;
+    left: 0;
+    position: absolute;
+    top: 0.1rem;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &--skew {
+    &:after {
+      transform: skew(-12deg);
+    }
+  }
+
+  &:hover {
+    background: $color-link-text;
+    color: $color-link-background;
+
+    &:after {
+      background: lighten($color-link-background, 45%);
+      color: $color-link-background;
+    }
+  }
+}

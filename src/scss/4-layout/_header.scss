@@ -3,20 +3,14 @@
 // -----------------------------------------------------------------------------
 
 .Header {
-  @include grid-row();
-  align-items: center;
-
-  &__logo,
-  &__tagline {
-    @include grid-column($width: (small: 12, medium: 6));
-  }
 
   &__logo {
     color: $color-text;
   }
 
   &__taglineText {
-    @extend %TypeGamma;
-    text-align: right;
+    @extend %TypeHuge;
+    font-weight: 300;
+    text-align: center;
   }
 }

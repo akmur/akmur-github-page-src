@@ -1,5 +1,10 @@
+.Body {
+  background: $color-background;
+}
+
 .Wrapper {
   @include grid-row(false);
+  margin-top: 3rem;
   max-width: rem-calc(1000);
 }
 
