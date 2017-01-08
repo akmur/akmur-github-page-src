@@ -4,8 +4,12 @@
 
 .Wrapper {
   @include grid-row(false);
-  margin-top: 3rem;
-  max-width: rem-calc(1000);
+  margin-top: 1rem;
+  max-width: rem-calc(1080);
+
+  @include media-query('medium') {
+    margin-top: 3rem;
+  }
 }
 
 .Page {

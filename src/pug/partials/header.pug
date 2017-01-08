@@ -1,37 +1,15 @@
 header.Header
-  .Header__social
-    .SocialList
-      a.SocialList__link(
-          href="https://alexmuraro.me"
-        )
-        svg.SocialList__icon
-          use(xlink:href='#icon-wp')
-      a.SocialList__link(
-          href="https://twitter.com/akmur"
-        )
-        svg.SocialList__icon
-          use(xlink:href='#icon-twitter')
-      a.SocialList__link(
-          href="https://it.linkedin.com/in/alessandromuraro"
-        )
-        svg.SocialList__icon
-          use(xlink:href='#icon-linkedin')
-      a.SocialList__link(
-          href="https://github.com/akmur"
-        )
-        svg.SocialList__icon
-          use(xlink:href='#icon-github')
-      a.SocialList__link(
-          href="mailto:akmuraro@gmail.com"
-        )
-        svg.SocialList__icon
-          use(xlink:href='#icon-email')
+  .Header__tagline
+    h2.Header__taglineText 
+      | Heavy weight 
+      span.u-strong front end 
+      | developer
   .Header__logo
     h1.u-visuallyHidden Alessandro Muraro
     svg.Logo
       use(xlink:href='#logo')
-  .Header__tagline
-    h2.Header__taglineText Heavy weight front end developer
+  .Header__social
+    include socials.pug
   //- .Header__links
   //-   ul.Header__linksList
   //-     li.Header__linksItem

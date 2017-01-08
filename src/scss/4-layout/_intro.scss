@@ -1,19 +1,32 @@
 .Intro {
   @include grid-row();
   align-items: center;
-  padding: 5rem 0 6rem;
+  justify-content: center;
+  padding: 3rem 0 3rem;
+
+  @include media-query('medium') {
+    padding: 5rem 0 6rem;
+  }
 
   &__image {
-    @include grid-column($width: (small: 12, medium: 3));
+    @include grid-column($width: (small: 12, medium: 4));
+    align-items: center;
+    justify-content: center;
   }
 
   &__content {
-    @include grid-column($width: (small: 12, medium: 9));
+    @include grid-column($width: (small: 12, medium: 8));
   }
 
   &__text {
     @extend %TypeAlpha;
     font-style: italic;
-    text-align: right;
+    padding: 0 2xrem;
+    text-align: center;
+
+    @include media-query('medium') {
+      padding: 0;
+      text-align: right;
+    }
   }
 }

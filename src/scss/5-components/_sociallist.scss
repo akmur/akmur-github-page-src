@@ -2,28 +2,25 @@
   @include grid-row();
   align-items: center;
   justify-content: center;
-  margin-bottom: 2rem;
 
   &__link {
+    // background: $color-text;
+    // height: rem-calc(48);
+    // width: rem-calc(48);
     align-items: center;
-    background: $color-text;
     border-radius: 50%;
-    color: $color-background;
+    color: $color-text;
     display: flex;
-    height: rem-calc(32);
     justify-content: center;
-    margin: 0 0.5em;
-    width: rem-calc(32);
+    margin: 0 1rem;
 
     &:hover {
-      background: $color-background;
-      color: $color-text;
+      opacity: 0.6;
     }
   }
 
   &__icon {
-    fill: currentColor;
-    width: rem-calc(16);
-    height: rem-calc(16);
+    width: rem-calc(24);
+    height: rem-calc(24);
   }
 }

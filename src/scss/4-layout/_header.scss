@@ -9,8 +9,17 @@
   }
 
   &__taglineText {
-    @extend %TypeHuge;
+    @extend %TypeDelta;
     font-weight: 300;
+    margin-bottom: 1rem;
     text-align: center;
+  }
+
+  &__social {
+    margin-top: 1.5rem;
+
+    @include media-query('medium') {
+      margin-top: 2rem;
+    }
   }
 }

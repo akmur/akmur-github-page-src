@@ -1,5 +1,13 @@
 .Avatar {
-  border: 0.75em solid $ebony-grey;
+  border: 0.5rem solid $ebony-grey;
   border-radius: 50%;
   overflow: hidden;
+  max-width: rem-calc(200);
+  margin: 0 0 3rem;
+
+  @include media-query('medium') {
+    border: 0.75rem solid $ebony-grey;
+    max-width: 100%;
+    margin: 0;
+  }
 }

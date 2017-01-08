@@ -9,24 +9,36 @@
   font-size: ms(0);
 }
 
-%TypeHuge {
-  font-size: ms(8);
-}
-
 %TypeAlpha {
-  font-size: ms(4);
+  font-size: ms(1);
+
+  @include media-query('medium') {
+    font-size: ms(4);
+  }
 }
 
 %TypeBeta {
-  font-size: ms(3);
+  font-size: ms(1);
+
+  @include media-query('medium') {
+    font-size: ms(3);
+  }
 }
 
 %TypeGamma {
-  font-size: ms(2);
+  font-size: ms(0);
+
+  @include media-query('medium') {
+    font-size: ms(2);
+  }
 }
 
 %TypeDelta {
-  font-size: ms(1);
+  font-size: ms(-1);
+
+  @include media-query('medium') {
+    font-size: ms(1);
+  }
 }
 
 body {

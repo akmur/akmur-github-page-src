@@ -62,6 +62,9 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
+body {
+  overflow-x: hidden; }
+
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
  * Since `*` has a specificity of 0, it does not override the `html` value
@@ -70,7 +73,9 @@ html {
  */
 *, *::before, *::after {
   -webkit-box-sizing: inherit;
-          box-sizing: inherit; }
+          box-sizing: inherit;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease; }
 
 body {
   color: #343436;
@@ -81,14 +86,23 @@ body {
 .List {
   font-size: 1.25rem; }
 
-.Header__taglineText {
-  font-size: 2.67949rem; }
-
 .Intro__text {
-  font-size: 1.83013rem; }
+  font-size: 1.375rem; }
+  @media only screen and (min-width: 45em) {
+    .Intro__text {
+      font-size: 1.83013rem; } }
 
 .Resume__title {
-  font-size: 1.66375rem; }
+  font-size: 1.375rem; }
+  @media only screen and (min-width: 45em) {
+    .Resume__title {
+      font-size: 1.66375rem; } }
+
+.Header__taglineText {
+  font-size: 1.13636rem; }
+  @media only screen and (min-width: 45em) {
+    .Header__taglineText {
+      font-size: 1.375rem; } }
 
 .u-visuallyHidden {
   border: 0;
@@ -99,6 +113,9 @@ body {
   padding: 0;
   position: absolute;
   width: 1px; }
+
+.u-strong {
+  font-weight: 400; }
 
 .Footer {
   -webkit-box-sizing: border-box;
@@ -113,7 +130,9 @@ body {
   display: flex;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
+          flex-wrap: wrap;
+  margin-bottom: 4rem;
+  margin-top: 1rem; }
   @media only screen and (min-width: 0em) {
     .Footer {
       margin-left: -0.5rem;
@@ -132,7 +151,14 @@ body {
 
 .Header__taglineText {
   font-weight: 300;
+  margin-bottom: 1rem;
   text-align: center; }
+
+.Header__social {
+  margin-top: 1.5rem; }
+  @media only screen and (min-width: 45em) {
+    .Header__social {
+      margin-top: 2rem; } }
 
 .Intro {
   -webkit-box-sizing: border-box;
@@ -152,7 +178,11 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 5rem 0 6rem; }
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 3rem 0 3rem; }
   @media only screen and (min-width: 0em) {
     .Intro {
       margin-left: -0.5rem;
@@ -165,6 +195,9 @@ body {
       margin-right: -1.5rem;
       width: -webkit-calc(100% + 3rem);
       width: calc(100% + 3rem); } }
+  @media only screen and (min-width: 45em) {
+    .Intro {
+      padding: 5rem 0 6rem; } }
   .Intro__image {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -176,7 +209,15 @@ body {
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
-            flex-direction: column; }
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
     @media only screen and (min-width: 0em) {
       .Intro__image {
         padding-left: 0.5rem;
@@ -202,7 +243,7 @@ body {
         -webkit-flex: 0 0 auto;
             -ms-flex: 0 0 auto;
                 flex: 0 0 auto;
-        width: 25%; } }
+        width: 33.33333%; } }
   .Intro__content {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -240,10 +281,15 @@ body {
         -webkit-flex: 0 0 auto;
             -ms-flex: 0 0 auto;
                 flex: 0 0 auto;
-        width: 75%; } }
+        width: 66.66667%; } }
   .Intro__text {
     font-style: italic;
-    text-align: right; }
+    padding: 0 2xrem;
+    text-align: center; }
+    @media only screen and (min-width: 45em) {
+      .Intro__text {
+        padding: 0;
+        text-align: right; } }
 
 .Resume {
   -webkit-box-sizing: border-box;
@@ -282,7 +328,8 @@ body {
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
-            flex-direction: column; }
+            flex-direction: column;
+    text-align: center; }
     @media only screen and (min-width: 0em) {
       .Resume__column {
         padding-left: 0.5rem;
@@ -309,13 +356,19 @@ body {
             -ms-flex: 0 0 auto;
                 flex: 0 0 auto;
         width: 50%; } }
+    @media only screen and (min-width: 45em) {
+      .Resume__column {
+        text-align: right; } }
     .Resume__column--right {
-      text-align: right; }
+      text-align: center; }
+      @media only screen and (min-width: 45em) {
+        .Resume__column--right {
+          text-align: right; } }
   .Resume__title {
+    border-bottom: 1px dashed #cdcdcf;
     font-weight: 400;
     margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px dashed #cdcdcf; }
+    padding-bottom: 1rem; }
 
 .Body {
   background: #ECF0F1; }
@@ -334,8 +387,11 @@ body {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  margin-top: 3rem;
-  max-width: 62.5rem; }
+  margin-top: 1rem;
+  max-width: 67.5rem; }
+  @media only screen and (min-width: 45em) {
+    .Wrapper {
+      margin-top: 3rem; } }
 
 .Page {
   -webkit-box-sizing: border-box;
@@ -369,28 +425,47 @@ body {
       width: 100%; } }
 
 .Avatar {
-  border: 0.75em solid #343436;
+  border: 0.5rem solid #343436;
   -webkit-border-radius: 50%;
           border-radius: 50%;
-  overflow: hidden; }
+  overflow: hidden;
+  max-width: 12.5rem;
+  margin: 0 0 3rem; }
+  @media only screen and (min-width: 45em) {
+    .Avatar {
+      border: 0.75rem solid #343436;
+      max-width: 100%;
+      margin: 0; } }
 
 .List {
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  padding: 0 2rem; }
+  @media only screen and (min-width: 45em) {
+    .List {
+      padding: 0; } }
   .List__item {
-    margin: 0 0 1rem 0; }
-    .List__item::after {
-      content: ''; }
+    margin: 0 0 1rem;
+    position: relative; }
     .List__item--tag {
       background: #343436;
       color: #ECF0F1;
       display: inline-block;
       margin: 0 1rem 1rem 0;
-      padding: 0 0.35em 0 0.25em; }
+      padding: 0.125em 0.75em; }
+      .List__item--tag:after {
+        background: -webkit-linear-gradient(45deg, #99999d, #99999d 50%, #ECF0F1 51%);
+        background: linear-gradient(45deg, #99999d, #99999d 50%, #ECF0F1 51%);
+        content: '';
+        height: 8px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 8px; }
 
 .Link {
   color: #ECF0F1;
   display: inline-block;
-  padding: 0 0.35em 0 0.25em;
+  padding: 0 0.35em;
   position: relative;
   text-decoration: none;
   z-index: 100; }
@@ -403,10 +478,12 @@ body {
     top: 0.1rem;
     width: 100%;
     z-index: -1; }
-  .Link--skew:after {
-    -webkit-transform: skew(-12deg);
-        -ms-transform: skew(-12deg);
-            transform: skew(-12deg); }
+  .Link--skew {
+    padding: 0 0.375em 0 0.25em; }
+    .Link--skew:after {
+      -webkit-transform: skew(-12deg);
+          -ms-transform: skew(-12deg);
+              transform: skew(-12deg); }
   .Link:hover {
     background: #ECF0F1;
     color: #C0392B; }
@@ -416,7 +493,11 @@ body {
 
 .Logo {
   fill: currentColor;
+  height: 4rem;
   width: 100%; }
+  @media only screen and (min-width: 45em) {
+    .Logo {
+      height: auto; } }
 
 .SocialList {
   -webkit-box-sizing: border-box;
@@ -439,8 +520,7 @@ body {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 2rem; }
+          justify-content: center; }
   @media only screen and (min-width: 0em) {
     .SocialList {
       margin-left: -0.5rem;
@@ -458,25 +538,20 @@ body {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    background: #343436;
     -webkit-border-radius: 50%;
             border-radius: 50%;
-    color: #ECF0F1;
+    color: #343436;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    height: 2rem;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: 0 0.5em;
-    width: 2rem; }
+    margin: 0 1rem; }
     .SocialList__link:hover {
-      background: #ECF0F1;
-      color: #343436; }
+      opacity: 0.6; }
   .SocialList__icon {
-    fill: currentColor;
-    width: 1rem;
-    height: 1rem; }
+    width: 1.5rem;
+    height: 1.5rem; }

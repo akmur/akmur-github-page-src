@@ -4,4 +4,6 @@
 
 .Footer {
   @include grid-row();
+  margin-bottom: 4rem;
+  margin-top: 1rem;
 }

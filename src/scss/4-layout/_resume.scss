@@ -3,17 +3,26 @@
 
   &__column {
     @include grid-column($width: (small: 12, medium: 6));
+    text-align: center;
+
+    @include media-query('medium') {
+      text-align: right;
+    }
 
     &--right {
-      text-align: right;
+      text-align: center;
+
+      @include media-query('medium') {
+        text-align: right;
+      }
     }
   }
 
   &__title {
     @extend %TypeBeta;
+    border-bottom: 1px dashed $color-border;
     font-weight: 400;
     margin-bottom: 1rem;
     padding-bottom: 1rem;
-    border-bottom: 1px dashed $color-border;
   }
 }
