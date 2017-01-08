@@ -84,25 +84,25 @@ body {
   line-height: 1.618; }
 
 .List {
-  font-size: 1.25rem; }
+  font-size: 1.325rem; }
 
 .Intro__text {
-  font-size: 1.375rem; }
+  font-size: 1.4575rem; }
   @media only screen and (min-width: 45em) {
     .Intro__text {
-      font-size: 1.83013rem; } }
+      font-size: 1.93993rem; } }
 
 .Resume__title {
-  font-size: 1.375rem; }
+  font-size: 1.4575rem; }
   @media only screen and (min-width: 45em) {
     .Resume__title {
-      font-size: 1.66375rem; } }
+      font-size: 1.76358rem; } }
 
 .Header__taglineText {
-  font-size: 1.13636rem; }
+  font-size: 1.20455rem; }
   @media only screen and (min-width: 45em) {
     .Header__taglineText {
-      font-size: 1.375rem; } }
+      font-size: 1.4575rem; } }
 
 .u-visuallyHidden {
   border: 0;
@@ -284,7 +284,7 @@ body {
         width: 66.66667%; } }
   .Intro__text {
     font-style: italic;
-    padding: 0 2xrem;
+    padding: 0 2rem;
     text-align: center; }
     @media only screen and (min-width: 45em) {
       .Intro__text {
@@ -358,7 +358,7 @@ body {
         width: 50%; } }
     @media only screen and (min-width: 45em) {
       .Resume__column {
-        text-align: right; } }
+        text-align: left; } }
     .Resume__column--right {
       text-align: center; }
       @media only screen and (min-width: 45em) {

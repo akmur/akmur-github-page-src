@@ -6,7 +6,7 @@
     text-align: center;
 
     @include media-query('medium') {
-      text-align: right;
+      text-align: left;
     }
 
     &--right {

@@ -21,7 +21,7 @@
   &__text {
     @extend %TypeAlpha;
     font-style: italic;
-    padding: 0 2xrem;
+    padding: 0 2rem;
     text-align: center;
 
     @include media-query('medium') {
